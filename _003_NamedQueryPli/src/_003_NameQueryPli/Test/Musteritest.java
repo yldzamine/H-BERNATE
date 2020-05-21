@@ -21,7 +21,7 @@ public class Musteritest {
 	  EntityManager em;
 	  
 	  Musteri musteri = new Musteri();
-	  musteri.setIdmusteri(4);
+	  musteri.setIdmusteri(8);
 	  musteri.setMusteriadi("Nazlý");
 	  musteri.setMusterisoyadi("YILDIZ");
 	  
@@ -34,7 +34,8 @@ public class Musteritest {
 	      em.persist(musteri);
       et.commit();
       
-      Query query = em.createNamedQuery("Musteri.findAll");
+      int gelendeger = 5;
+      Query query = em.createNamedQuery("isimlerigetir").setParameter("p_Id",gelendeger);
       List<?> list = query.getResultList();
       
       for (Object obj : list) {

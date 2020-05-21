@@ -9,7 +9,11 @@ import javax.persistence.*;
  * 
  */
 @Entity
-@NamedQuery(name="Musteri.findAll", query="SELECT m FROM Musteri m")
+@NamedQueries({ 
+	@NamedQuery(name = "Musteri.findAll", query = "SELECT m FROM Musteri m"), 
+	@NamedQuery(name = "isimlerigetir", 
+	query = "SELECT m FROM Musteri m WHERE m.idmusteri = :p_Id") 
+})
 public class Musteri implements Serializable {
 	private static final long serialVersionUID = 1L;
 
