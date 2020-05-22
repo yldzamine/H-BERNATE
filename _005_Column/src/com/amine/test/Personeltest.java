@@ -19,6 +19,7 @@ public class Personeltest {
        personel.setPersonelgiristarihi(new Date());
        personel.setPersonleadres("ÝSTANBUL/SArýyer");
        
+       
        SessionFactory sessionfactory = new Configuration().configure().buildSessionFactory();
        Session session = sessionfactory.openSession();
        session.beginTransaction();
