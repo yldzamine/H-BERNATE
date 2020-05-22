@@ -1,10 +1,14 @@
 package com.amine;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity(name = "PERSONEL_TABLOSU") //Veritabaný tablo adý.
+@Entity
+@Table(name="CALÝSANLAR")//Veritabaný tablo adý.
 public class Personel {
 
 	@Column(name="ID") //Veritabanýndaki tablodaki bir kolon adý.
@@ -13,6 +17,25 @@ public class Personel {
 	private String personeladi;
 	@Column(name="SOYADI")
 	private String personelsoyadi;
+	@Column(name="GÝRÝS_TARÝHÝ")
+	private Date personelgiristarihi;
+	@Column(name="ADRES")
+	public Date getPersonelgiristarihi() {
+		return personelgiristarihi;
+	}
+
+	public void setPersonelgiristarihi(Date personelgiristarihi) {
+		this.personelgiristarihi = personelgiristarihi;
+	}
+
+	public String getPersonleadres() {
+		return personleadres;
+	}
+
+	public void setPersonleadres(String personleadres) {
+		this.personleadres = personleadres;
+	}
+	private String personleadres;
 	
 	@Id
 	public int getPersonelId() {
