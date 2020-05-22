@@ -6,7 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+@Entity //veritabanýnda bir varlýk sýnýfý
 public class Personel implements Serializable{
 
 	@Column(name="ID")
