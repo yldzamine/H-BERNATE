@@ -1,17 +1,15 @@
 package com.amine;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
-public class Personel implements Serializable{
+@Entity(name = "PERSONEL_TABLOSU") //Veritabaný tablo adý.
+public class Personel {
 
-	@Column(name="ID")
+	@Column(name="ID") //Veritabanýndaki tablodaki bir kolon adý.
 	private int personelId;
-	@Column(name="ADÝ")
+	@Column(name="ADI")
 	private String personeladi;
 	@Column(name="SOYADI")
 	private String personelsoyadi;
