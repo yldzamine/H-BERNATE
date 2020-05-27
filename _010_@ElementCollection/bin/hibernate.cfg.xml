@@ -1,0 +1,32 @@
+<!--
+  ~ Hibernate, Relational Persistence for Idiomatic Java
+  ~
+  ~ License: GNU Lesser General Public License (LGPL), version 2.1 or later.
+  ~ See the lgpl.txt file in the root directory or <http://www.gnu.org/licenses/lgpl-2.1.html>.
+  -->
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+      <!--   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">1234</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernatedb?serverTimezone=UTC</property>
+      
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+        
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <mapping class="com.amine.Personel"></mapping>
+        <mapping class="com.amine.Adres"></mapping>
+        
+        
+        
+    </session-factory>
+</hibernate-configuration>
